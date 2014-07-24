@@ -1,0 +1,88 @@
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+ <style type="text/css">
+     .gauge{
+        width: 280px;
+        height: 200px;
+        margin: 0 auto;
+        float: left;
+     }
+
+     </style>
+
+{tab Mobile Data}
+	<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+        <!--Sidebar content-->
+        this will display Network utilization and Access network KPI
+        </div>
+
+        <div class="span10">
+        <!--Body content-->
+            <div class="row">
+                <div id="2g" class="gauge"></div>
+                <div id="3g" class="gauge"></div>
+                <div id="4g" class="gauge"></div>
+            </div>
+            <div class="row">
+                <div class="gauge">DNS success rate</div>
+                <div class="gauge"></div>
+                <div class="gauge"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+{tab Mobile Voice &amp; SMS}
+<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+        <!--Sidebar content-->
+        this will display Network utilization and Access network KPI
+        </div>
+
+        <div class="span10">
+        <!--Body content-->
+            <div class="row">
+                <div id="2gb" class="gauge"></div>
+                <div id="3gb" class="gauge"></div>
+                <div id="4gb" class="gauge"></div>
+            </div>
+            <div class="row">
+                <div class="gauge">DNS success rate</div>
+                <div class="gauge"></div>
+                <div class="gauge"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+{tab Wireline}
+{/tabs}
+
+
+
+<script type="text/javascript">
+
+$(function(){$("#2g").highcharts({exporting:{enabled:true},credits:{enabled:false},chart:{type:"gauge",plotBorderWidth:0,plotBackgroundColor:null,plotBackgroundImage:null,plotShadow:false,width:280,height:180},title:{text:"HTTP Success Rate"},pane:[{startAngle:-90,endAngle:90,background:null,center:["25%","100%"],size:80},{startAngle:-90,endAngle:90,background:null,center:["75%","100%"],size:80}],yAxis:[{min:50,max:100,tickPixelInterval:20,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:50,to:70,color:"#DF5353"},{from:70,to:80,color:"#DDDF0D"},{from:80,to:100,color:"#55BF3B"}],pane:0,title:{text:"<b>Postpaid</b>",y:-80}},{min:0,max:50,tickPixelInterval:30,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:2},plotBands:[{from:0,to:30,color:"#DF5353"},{from:30,to:40,color:"#DDDF0D"},{from:40,to:50,color:"#55BF3B"}],pane:1,title:{text:"<b>Prepaid</b>",y:-80}}],plotOptions:{gauge:{dataLabels:{enabled:true},dial:{radius:"100%"}}},series:[{name:"Postpaid",data:[87],yAxis:0,tooltip:{valueSuffix:" %"}},{name:"Prepaid",data:[48],yAxis:1,tooltip:{valueSuffix:" %"}}]})})
+
+$(function(){$("#3g").highcharts({exporting:{enabled:true},credits:{enabled:false},chart:{type:"gauge",plotBorderWidth:0,plotBackgroundColor:null,plotBackgroundImage:null,plotShadow:false,width:280,height:180},title:{text:"Throughput"},pane:[{startAngle:-90,endAngle:90,background:null,center:["25%","100%"],size:80},{startAngle:-90,endAngle:90,background:null,center:["75%","100%"],size:80}],yAxis:[{min:10,max:400,tickPixelInterval:40,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:0,to:100,color:"#DF5353"},{from:100,to:200,color:"#DDDF0D"},{from:200,to:400,color:"#55BF3B"}],pane:0,title:{text:"<b>Upload</b>",y:-80}},{min:0,max:1.5,tickPixelInterval:40,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:0,to:1,color:"#DF5353"},{from:1,to:1.1,color:"#DDDF0D"},{from:1.1,to:1.5,color:"#55BF3B"}],pane:1,title:{text:"<b>Download</b>",y:-80}}],plotOptions:{gauge:{dataLabels:{enabled:true},dial:{radius:"100%"}}},series:[{name:"Upload",data:[388],yAxis:0,tooltip:{valueSuffix:" kbps"}},{name:"Download",data:[1.1],yAxis:1,tooltip:{valueSuffix:" Mbps"}}]})})
+
+
+$(function(){$("#4g").highcharts({exporting:{enabled:true},credits:{enabled:false},chart:{type:"gauge",plotBorderWidth:0,plotBackgroundColor:null,plotBackgroundImage:null,plotShadow:false,width:280,height:180},title:{text:"HTTP Success Rate"},pane:[{startAngle:-90,endAngle:90,background:null,center:["25%","100%"],size:80},{startAngle:-90,endAngle:90,background:null,center:["75%","100%"],size:80}],yAxis:[{min:50,max:100,tickPixelInterval:20,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:50,to:70,color:"#DF5353"},{from:70,to:80,color:"#DDDF0D"},{from:80,to:100,color:"#55BF3B"}],pane:0,title:{text:"<b>Postpaid</b>",y:-80}},{min:50,max:100,tickPixelInterval:20,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:50,to:70,color:"#DF5353"},{from:70,to:80,color:"#DDDF0D"},{from:80,to:100,color:"#55BF3B"}],pane:1,title:{text:"<b>Prepaid</b>",y:-80}}],plotOptions:{gauge:{dataLabels:{enabled:true},dial:{radius:"100%"}}},series:[{name:"Postpaid",data:[81],yAxis:0,tooltip:{valueSuffix:" %"}},{name:"Prepaid",data:[88],yAxis:1,tooltip:{valueSuffix:" %"}}]})})
+
+
+
+////////////////////////////////////////////
+
+$(function(){$("#2gb").highcharts({exporting:{enabled:true},credits:{enabled:false},chart:{type:"gauge",plotBorderWidth:0,plotBackgroundColor:null,plotBackgroundImage:null,plotShadow:false,width:280,height:180},title:{text:"HTTP Success Rate"},pane:[{startAngle:-90,endAngle:90,background:null,center:["25%","100%"],size:80},{startAngle:-90,endAngle:90,background:null,center:["75%","100%"],size:80}],yAxis:[{min:50,max:100,tickPixelInterval:20,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:50,to:70,color:"#DF5353"},{from:70,to:80,color:"#DDDF0D"},{from:80,to:100,color:"#55BF3B"}],pane:0,title:{text:"<b>Postpaid</b>",y:-80}},{min:0,max:50,tickPixelInterval:30,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:2},plotBands:[{from:0,to:30,color:"#DF5353"},{from:30,to:40,color:"#DDDF0D"},{from:40,to:50,color:"#55BF3B"}],pane:1,title:{text:"<b>Prepaid</b>",y:-80}}],plotOptions:{gauge:{dataLabels:{enabled:true},dial:{radius:"100%"}}},series:[{name:"Postpaid",data:[87],yAxis:0,tooltip:{valueSuffix:" %"}},{name:"Prepaid",data:[48],yAxis:1,tooltip:{valueSuffix:" %"}}]})})
+
+$(function(){$("#3gb").highcharts({exporting:{enabled:true},credits:{enabled:false},chart:{type:"gauge",plotBorderWidth:0,plotBackgroundColor:null,plotBackgroundImage:null,plotShadow:false,width:280,height:180},title:{text:"Throughput"},pane:[{startAngle:-90,endAngle:90,background:null,center:["25%","100%"],size:80},{startAngle:-90,endAngle:90,background:null,center:["75%","100%"],size:80}],yAxis:[{min:10,max:400,tickPixelInterval:40,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:0,to:100,color:"#DF5353"},{from:100,to:200,color:"#DDDF0D"},{from:200,to:400,color:"#55BF3B"}],pane:0,title:{text:"<b>Upload</b>",y:-80}},{min:0,max:1.5,tickPixelInterval:40,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:0,to:1,color:"#DF5353"},{from:1,to:1.1,color:"#DDDF0D"},{from:1.1,to:1.5,color:"#55BF3B"}],pane:1,title:{text:"<b>Download</b>",y:-80}}],plotOptions:{gauge:{dataLabels:{enabled:true},dial:{radius:"100%"}}},series:[{name:"Upload",data:[388],yAxis:0,tooltip:{valueSuffix:" kbps"}},{name:"Download",data:[1.1],yAxis:1,tooltip:{valueSuffix:" Mbps"}}]})})
+
+
+$(function(){$("#4gb").highcharts({exporting:{enabled:true},credits:{enabled:false},chart:{type:"gauge",plotBorderWidth:0,plotBackgroundColor:null,plotBackgroundImage:null,plotShadow:false,width:280,height:180},title:{text:"HTTP Success Rate"},pane:[{startAngle:-90,endAngle:90,background:null,center:["25%","100%"],size:80},{startAngle:-90,endAngle:90,background:null,center:["75%","100%"],size:80}],yAxis:[{min:50,max:100,tickPixelInterval:20,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:50,to:70,color:"#DF5353"},{from:70,to:80,color:"#DDDF0D"},{from:80,to:100,color:"#55BF3B"}],pane:0,title:{text:"<b>Postpaid</b>",y:-80}},{min:50,max:100,tickPixelInterval:20,tickWidth:2,tickPosition:"outside",labels:{rotation:"auto",distance:15,step:1},plotBands:[{from:50,to:70,color:"#DF5353"},{from:70,to:80,color:"#DDDF0D"},{from:80,to:100,color:"#55BF3B"}],pane:1,title:{text:"<b>Prepaid</b>",y:-80}}],plotOptions:{gauge:{dataLabels:{enabled:true},dial:{radius:"100%"}}},series:[{name:"Postpaid",data:[81],yAxis:0,tooltip:{valueSuffix:" %"}},{name:"Prepaid",data:[88],yAxis:1,tooltip:{valueSuffix:" %"}}]})})
+
+</script>

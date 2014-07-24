@@ -1,0 +1,43 @@
+Do MOBILE DATA first
+
+drill downs main gauge - mobile data - open new window
+	-> daily
+	-> monthly
+
+
+
+daily and monthly
+
+dynamic DATE range option for graphs and data
+
+if data can be trend(up or down) - projection
+
+main modules(tabs) and can be open in a new window
+	Mobile broadband
+	voice and sms
+	wireline
+	VIp
+
+
+add sidebar on the tabs
+
+
+themes for charts
+
+export menu, add item
+
+
+joomla export module
+
+
+add tooltip comment on events or downtime
+
+
+-------------------------------
+
+
+
+Mobile Data
+Mobile Voice & SMS
+Wireline
+

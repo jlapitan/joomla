@@ -1,0 +1,19 @@
+{tab Mobile Data}
+	<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+        <!--Sidebar content-->
+
+        this will display Network utilization and Access network KPI
+        </div>
+
+        <div class="span10">
+        <!--Body content-->
+
+        this will display gauges in 3 columns and/or two rows
+        </div>
+      </div>
+    </div>
+{tab Mobile Voice &amp; SMS}
+{tab Wireline}
+{/tabs}
